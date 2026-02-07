@@ -37,8 +37,12 @@ public class Main {
         devCamila.setNome("Camila");
         devCamila.inscreverBootcamp(bootcamp);
         System.out.println("Conteúdos Inscritos Camila:" + devCamila.getConteudosInscritos());
-        devCamila.progredir();
-        devCamila.progredir();
+        try {
+            devCamila.progredir();
+            devCamila.progredir();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
         System.out.println("-");
         System.out.println("Conteúdos Inscritos Camila:" + devCamila.getConteudosInscritos());
         System.out.println("Conteúdos Concluídos Camila:" + devCamila.getConteudosConcluidos());
@@ -48,11 +52,20 @@ public class Main {
 
         Dev devJoao = new Dev();
         devJoao.setNome("Joao");
+        try {
+            devJoao.progredir();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
         devJoao.inscreverBootcamp(bootcamp);
         System.out.println("Conteúdos Inscritos João:" + devJoao.getConteudosInscritos());
-        devJoao.progredir();
-        devJoao.progredir();
-        devJoao.progredir();
+        try {
+            devJoao.progredir();
+            devJoao.progredir();
+            devJoao.progredir();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
         System.out.println("-");
         System.out.println("Conteúdos Inscritos João:" + devJoao.getConteudosInscritos());
         System.out.println("Conteúdos Concluidos João:" + devJoao.getConteudosConcluidos());
