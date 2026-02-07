@@ -8,8 +8,8 @@ public class Bootcamp {
     private String descricao;
     private final LocalDate dataInicial = LocalDate.now();
     private final LocalDate dataFinal = dataInicial.plusDays(45);
-    private Set<Dev> devsInscritos = new HashSet<>();
-    private Set<Conteudo> conteudos = new LinkedHashSet<>();
+    private final Set<Dev> devsInscritos = new HashSet<>();
+    private final Set<Conteudo> conteudos = new LinkedHashSet<>();
 
 
     public String getNome() {
@@ -40,16 +40,8 @@ public class Bootcamp {
         return Collections.unmodifiableSet(new LinkedHashSet<>(this.devsInscritos));
     }
 
-    public void setDevsInscritos(Set<Dev> devsInscritos) {
-        this.devsInscritos = devsInscritos;
-    }
-
     public Set<Conteudo> getConteudos() {
         return Collections.unmodifiableSet(new LinkedHashSet<>(this.conteudos));
-    }
-
-    public void setConteudos(Set<Conteudo> conteudos) {
-        this.conteudos = conteudos;
     }
 
     public boolean addConteudo(Conteudo conteudo) {
