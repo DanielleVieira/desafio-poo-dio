@@ -29,9 +29,9 @@ public class Main {
         Bootcamp bootcamp = new Bootcamp();
         bootcamp.setNome("Bootcamp Java Developer");
         bootcamp.setDescricao("Descrição Bootcamp Java Developer");
-        bootcamp.getConteudos().add(curso1);
-        bootcamp.getConteudos().add(curso2);
-        bootcamp.getConteudos().add(mentoria);
+        bootcamp.addConteudo(curso1);
+        bootcamp.addConteudo(curso2);
+        bootcamp.addConteudo(mentoria);
 
         Dev devCamila = new Dev();
         devCamila.setNome("Camila");
